@@ -1,0 +1,20 @@
+
+
+[
+    {
+    "Lenguajes":"Python",
+    "puntaje":"7"
+    },
+    {"Lenguajes":"java",
+    "puntaje":"2"
+    },
+    {"Lenguajes":"Html",
+    "puntaje":"5"
+    },
+    {"Lenguajes":"Css",
+    "puntaje":"4"
+    },
+    {"Lenguajes":"Javascript",
+    "puntaje":"3"
+    }
+]
