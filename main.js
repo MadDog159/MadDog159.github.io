@@ -32,3 +32,34 @@ document.addEventListener("DOMContentLoaded", () => {
   let contenedor = document.querySelector('.contenedor');
   carrousel(contenedor);
 });
+
+document.querySelector('#boton').addEventListener('click',traerDatos);
+
+function traerDatos(){
+  const xhttp = new XMLHttpRequest();
+
+  xhttp.open('GET','data.json',true)
+  
+  xhttp.send();
+
+  xhttp.onreadystatechange = function(){
+
+    if(this,this.readyState == 4 && this.status ==200){
+      //console.log(this.responseText)
+      let datos = JSON.parse(this.responseText);
+      //console.log(datos);
+      let res = document.querySelector('#res');
+      res.innerHTML = '';
+
+      for(let item of datos){
+        //console.log(item.Python);
+        res.innerHTML +=`
+        <tr>
+        <td>${item.Lenguajes}</td>
+        <td>${item.puntaje}</td>
+        </tr>
+        `
+      }
+    }
+  }
+}
