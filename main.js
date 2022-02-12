@@ -28,6 +28,7 @@ function carrousel(contenedor){
     }
   });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   let contenedor = document.querySelector('.contenedor');
   carrousel(contenedor);
@@ -78,7 +79,7 @@ document.getElementById("buttonContact").addEventListener('click', function(){
   } else{
 
 
-    
+
       console.log("Nombre: "+nombre);
       console.log("E-mail: "+email);
       console.log("Mensaje: "+message);
