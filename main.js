@@ -63,3 +63,25 @@ function traerDatos(){
     }
   }
 }
+
+document.getElementById("buttonContact").addEventListener('click', function(){
+
+  var nombre = document.getElementById("nameInput").value;
+  var email = document.getElementById("mailInput").value;
+  var message = document.getElementById("messageInput").value;
+
+  console.log(nombre);
+
+  if ( (nombre === "") || (email === "") || (message === "") || (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)))){
+    alert("Ha ingresado un carácter inválido o ha dejado algún campo vacío.");
+
+  } else{
+
+      console.log("Nombre: "+nombre);
+      console.log("E-mail: "+email);
+      console.log("Mensaje: "+message);
+      alert("Su solicitud ha sido enviada.");
+
+  }
+
+});
